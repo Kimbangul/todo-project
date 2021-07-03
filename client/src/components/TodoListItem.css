@@ -1,0 +1,105 @@
+.TodoListItem {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 20px;
+}
+
+.TodoListItem .option {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.TodoListItem:hover .option {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s 0s;
+}
+
+.TodoListItem .checkbox .todo {
+  position: relative;
+}
+
+.TodoListItem .checkbox .todo::after {
+  content: "";
+  display: block;
+  width: 0;
+  /* width: 110%; */
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fa585e;
+  transition: width 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.TodoListItem .checkbox.completed .todo::after {
+  width: 100%;
+}
+
+.checkbox {
+  cursor: pointer;
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.TodoListItem .checkbox.completed svg {
+  color: #5f2eea;
+}
+
+.situation .checkbox svg {
+  color: #f4b740;
+}
+
+.situation .checkbox.completed svg {
+  color: #00ba88;
+}
+
+.TodoListItem .checkbox.completed .todo {
+  /* text-decoration: line-through;
+  text-decoration-color: #fa585e; */
+  color: #cdbef8;
+}
+
+.checkbox > .todo {
+  display: flex;
+  margin-left: 30px;
+}
+
+.checkbox > span {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #4e4b66;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.situation .checkbox svg {
+  width: 0.75em;
+  height: 0.75em;
+}
+
+.option {
+  display: flex;
+  flex: 1 0 0;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #8762ef;
+  opacity: 0.5;
+}
+
+.option > .change {
+  margin-right: 10px;
+}
+
+.situation {
+  margin-right: 3%;
+  display: flex;
+  align-items: center;
+}

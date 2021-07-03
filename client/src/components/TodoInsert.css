@@ -1,0 +1,21 @@
+.TodoInsert {
+  width: 100%;
+  height: 50px;
+  margin-top: 3%;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.Plus {
+  color: #aaabf7;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 3%;
+}
+
+.Plus > div :hover {
+  color: #5f2eea;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}

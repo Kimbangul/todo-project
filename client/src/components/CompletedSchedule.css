@@ -1,0 +1,25 @@
+.PageHeader{
+    margin: 50px;
+}
+
+.Pagetitle{
+    font-size: 2em;
+    color: #5F2EEA;
+    
+}
+
+.PageHeader .search {
+    cursor: pointer;
+}
+
+.PageHeader .search > svg{
+    width: 1.2em;
+    height: 1.2em;
+    color: #5F2EEA;
+    transition: opacity 0.3s;
+   
+}
+
+.PageHeader .search:hover > svg{
+    opacity: 0.6;
+}
